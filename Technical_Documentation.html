@@ -1,0 +1,125 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Java Technical Guide</title>
+  <link rel="stylesheet" href="styles3.css"/>
+</head>
+<body>
+  <aside class="sidebar">
+    <h1 class="brand">Java Tech Guide</h1>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#basic-syntax">Basic Syntax</a></li>
+        <li><a href="#types">Types</a></li>
+        <li><a href="#flow-control">Flow Control</a></li>
+        <li><a href="#oop-concepts">OOP Concepts</a></li>
+        <li><a href="#exception-handling">Exception Handling</a></li>
+        <li><a href="#generics">Generics</a></li>
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#streams">Streams</a></li>
+        <li><a href="#lambda-expressions">Lambda Expressions</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <article class="content">
+    <section id="overview" class="doc-section">
+      <h2>Overview</h2>
+      <p>Java is an advanced, class-based, object-oriented language crafted to minimize implementation dependencies.</p>
+      <p>It powers large-scale enterprise software across platforms.</p>
+      <p>Because Java compiles to bytecode, it runs wherever a compatible JVM exists—no recompilation needed.</p>
+    </section>
+
+    <section id="basic-syntax" class="doc-section">
+      <h2>Basic Syntax</h2>
+      <p>Drawing heavily from C++, Java’s syntax requires each program to reside in a class.</p>
+      <p>Sample “Hello, World!”:</p>
+      <pre><code>public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}</code></pre>
+      <p>The entry point is always the <code>main</code> method inside a class.</p>
+    </section>
+
+    <section id="types" class="doc-section">
+      <h2>Data Types</h2>
+      <p>Java categorizes types into primitive and reference types:</p>
+      <ul>
+        <li><strong>Primitive</strong>: <code>int</code>, <code>byte</code>, <code>short</code>, <code>long</code>, <code>float</code>, <code>double</code>, <code>char</code>, <code>boolean</code></li>
+        <li><strong>Reference</strong>: <code>String</code>, <code>Array</code>, <code>Class</code>, <code>Interface</code></li>
+      </ul>
+    </section>
+
+    <section id="flow-control" class="doc-section">
+      <h2>Flow Control</h2>
+      <p>Control structures in Java include conditionals, loops, and switch statements.</p>
+      <pre><code>if (x > 0) {
+    System.out.println("Positive");
+}</code></pre>
+      <p>Typical statements: <code>if</code>, <code>else</code>, <code>for</code>, <code>while</code>, and <code>switch</code>.</p>
+    </section>
+
+    <section id="oop-concepts" class="doc-section">
+      <h2>OOP Concepts</h2>
+      <p>Java is fundamentally object-oriented. Core principles:</p>
+      <ul>
+        <li><em>Encapsulation</em></li>
+        <li><em>Inheritance</em></li>
+        <li><em>Polymorphism</em></li>
+        <li><em>Abstraction</em></li>
+      </ul>
+    </section>
+    <section id="exception-handling" class="doc-section">
+  <h2>Exception Handling</h2>
+  <p>Java lets you manage runtime errors using <code>try</code>, <code>catch</code>, <code>finally</code>, and <code>throw</code> statements.</p>
+  <pre><code>try {
+    int result = 10 / 0;
+} catch (ArithmeticException e) {
+    System.out.println("Cannot divide by zero!");
+} finally {
+    System.out.println("Execution complete.");
+}</code></pre>
+</section>
+
+<section id="generics" class="doc-section">
+  <h2>Generics</h2>
+  <p>Generics enable you to write type-safe code by parameterizing classes and methods.</p>
+  <pre><code>List&lt;String&gt; names = new ArrayList&lt;&gt;();
+names.add("Alice");
+String first = names.get(0);</code></pre>
+</section>
+
+<section id="collections" class="doc-section">
+  <h2>Collections Framework</h2>
+  <p>The Collections Framework provides interfaces and implementations for storing groups of objects.</p>
+  <ul>
+    <li><strong>List</strong>: Ordered, allows duplicates (e.g., <code>ArrayList</code>).</li>
+    <li><strong>Set</strong>: No duplicates (e.g., <code>HashSet</code>).</li>
+    <li><strong>Map</strong>: Key–value pairs (e.g., <code>HashMap</code>).</li>
+  </ul>
+</section>
+
+<section id="streams" class="doc-section">
+  <h2>Streams API</h2>
+  <p>The Streams API (since Java 8) supports functional-style operations on collections.</p>
+  <pre><code>List&lt;Integer&gt; nums = List.of(1,2,3,4,5);
+nums.stream()
+    .filter(n -&gt; n % 2 == 0)
+    .forEach(System.out::println);</code></pre>
+</section>
+
+<section id="lambda-expressions" class="doc-section">
+  <h2>Lambda Expressions</h2>
+  <p>Lambdas provide a concise way to represent anonymous functions:</p>
+  <pre><code>Runnable r = () -&gt; System.out.println("Running in a lambda!");
+new Thread(r).start();</code></pre>
+</section>
+
+  </article>
+</body>
+</html>

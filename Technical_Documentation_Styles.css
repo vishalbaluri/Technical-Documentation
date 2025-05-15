@@ -1,0 +1,93 @@
+/* app.css */
+:root {
+  --primary-bg: #2c2f33;
+  --text-light: #eef2f3;
+  --code-bg: #ececec;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  color: #333;
+  line-height: 1.5;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background: var(--primary-bg);
+  color: var(--text-light);
+  padding: 2rem 1rem;
+  overflow-y: auto;
+}
+
+.brand {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-list li + li {
+  margin-top: 0.75rem;
+}
+
+.nav-list a {
+  color: var(--text-light);
+  text-decoration: none;
+  display: block;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.nav-list a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.content {
+  margin-left: 260px;
+  padding: 2rem;
+}
+
+.doc-section + .doc-section {
+  margin-top: 2.5rem;
+}
+
+h2 {
+  margin-bottom: 0.6rem;
+  font-size: 1.25rem;
+}
+
+code, pre {
+  font-family: Consolas, Monaco, monospace;
+  background: var(--code-bg);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+}
+
+pre {
+  padding: 0.8rem;
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  .content {
+    margin: 0;
+  }
+}
